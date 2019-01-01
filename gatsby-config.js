@@ -10,7 +10,13 @@ module.exports = {
         protocol: "http",
         hostingWPCOM: false,
         useACF: true,
-        
+        includedRoutes: [
+          "/*/*/categories",
+          "/*/*/posts",
+          "/*/*/pages",
+          "/*/*/media",
+          "/*/*/tags",
+        ],
       },
     },
     'gatsby-plugin-react-helmet'],
