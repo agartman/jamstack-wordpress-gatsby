@@ -2,11 +2,10 @@ import React, { Component } from "react"
 
 class PostTemplate extends Component {
   render() {
-    const {title, body} = this.props.data.wordpressPost.acf;
+    const {facebook} = this.props.data.wordpressPost.acf;
     return (
       <div>
-          <h1 dangerouslySetInnerHTML={{ __html: title }} />
-          <div dangerouslySetInnerHTML={{ __html: body }} />
+          <h1 dangerouslySetInnerHTML={{ __html: facebook }} />
       </div>
     )
   }
@@ -18,8 +17,7 @@ export const pageQuery = graphql`
 query currentPostQuery($id: String!) {
   wordpressPost(id: { eq: $id }) {
     acf {
-      title
-      body
+      facebook
     }
   }
   site {

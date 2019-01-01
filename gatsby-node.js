@@ -28,10 +28,6 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
                   status
                   template
                   date
-                  acf {
-                    title
-                    body
-                  }
                 }
               }
             }
